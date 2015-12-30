@@ -28,7 +28,7 @@ class App extends React.Component {
 
   render() {
     if (!this.state.users) {
-      return <p>Loading...</p>;
+      return <p className="text-center">Loading...</p>;
     }
 
     return (
