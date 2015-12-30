@@ -22,7 +22,7 @@ class App extends React.Component {
           return console.log(err);
         }
 
-        this.setState({users: data.text});
+        this.setState({users: JSON.parse(data.text)});
       });
   }
 
