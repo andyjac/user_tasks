@@ -40,7 +40,7 @@ class User extends React.Component {
   }
 
   buildUserTasksUrl() {
-    var BASE_URL = this.props.baseUrl;
+    const BASE_URL = this.props.baseUrl;
     var id = this.props.user.id;
 
     return `${BASE_URL}/${id}/tasks`;
