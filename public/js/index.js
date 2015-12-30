@@ -32,7 +32,7 @@ class App extends React.Component {
     }
 
     return (
-      <UserList users={this.state.users} />
+      <UserList users={this.state.users} baseUrl={BASE_URL} />
     );
   }
 }
