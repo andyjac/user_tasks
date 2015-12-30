@@ -24,7 +24,6 @@ class TaskList extends React.Component {
   render() {
     return (
       <div className="task-list__container">
-        <h4>Current Tasks:</h4>
         <ol className="task-list">
           {this.renderTasks()}
         </ol>
