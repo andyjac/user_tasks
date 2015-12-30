@@ -18,15 +18,18 @@ class User extends React.Component {
     }
 
     return (
-      <TaskList tasks={this.state.tasks} fetchTasks={this.fetchTasks.bind(this)} />
+      <TaskList
+        tasks={this.state.tasks}
+        fetchTasks={this.fetchTasks.bind(this)}
+      />
     );
   }
 
   fetchTasks() {
-    const URL = this.buildUrl();
+    const TASKS_URL = this.buildUserTasksUrl();
 
     request
-      .get(URL)
+      .get(TASKS_URL)
       .end((err, data) => {
         if (err) {
           return console.log(err);
@@ -36,7 +39,7 @@ class User extends React.Component {
       });
   }
 
-  buildUrl() {
+  buildUserTasksUrl() {
     var id = this.props.user.id;
 
     return this.props.baseUrl + '/' + id + '/tasks';
