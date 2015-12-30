@@ -27,6 +27,9 @@ gulp.task('client', function() {
   var html = gulp.src('./public/**/*.html')
       .pipe(gulp.dest('./dist'));
 
+  var css = gulp.src('./public/**/*.css')
+      .pipe(gulp.dest('./dist'));
+
   var build = gulp.src('./public/js/index.js')
       .pipe(webpack({
         module: {
@@ -46,7 +49,7 @@ gulp.task('client', function() {
       .pipe(gulp.dest('./dist'));
 
 
-  merge(html, build);
+  merge(html, css, build);
 });
 
 gulp.task('watch', function() {

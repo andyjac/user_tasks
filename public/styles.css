@@ -1,0 +1,21 @@
+body {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.user-list {
+  margin: 0 auto;
+}
+
+.user-list__item p {
+  padding-right: 10px;
+  display: inline;
+}
+
+.user-list__item {
+  margin-bottom: 10px
+}
+
+.task-list__item {
+  padding: 5px;
+}
