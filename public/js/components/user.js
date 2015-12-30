@@ -40,9 +40,10 @@ class User extends React.Component {
   }
 
   buildUserTasksUrl() {
+    var BASE_URL = this.props.baseUrl;
     var id = this.props.user.id;
 
-    return this.props.baseUrl + '/' + id + '/tasks';
+    return `${BASE_URL}/${id}/tasks`;
   }
 
   toggleTaskList() {
